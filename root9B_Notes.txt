@@ -1,0 +1,32 @@
+root9B
+1. server and client program is working.
+2. Using gpg I am able to encrypt and generate the gpg encrypted message
+3. While sending on the server client I cannot send the exact same thing 
+as new line character creates end of message on the server. Solved it by 
+writing the file to string function in C.
+4. When the message is received the message is a string and gpg will only
+decrypt if the message is in exact gpg format file. So, I wrote another 
+program string2file.c to convert this into revcheck.txt file.
+(!--- The bug is that format is not exact to gpg format )
+
+ ----1 Ask the message to be sent by some shell command
+ ----2 Automatically do a gpg encryption 
+ ----3 Automatically convert gpg file to a string and send
+ 
+ 
+ ----1 Receive the message by the invoking the tcpclient by shell
+ ----2 Automatically convert gpg string to a gpg txt and then after to gpg
+ ----3 Automaticall decrypt the gpg file and echo the message
+
+5. If there is time then try to integrate the two with stunnel.
+
+
+
+Steps:
+1. Get the gpg package # sudo apt-get install gpg
+2. Generate public and private key pair # gpg --gen-key
+3. Build tcpserver.c and tcpclient.c 
+4. Execute working.sh to run the server
+5. Execute revworking.sh to run the client
+
+ 

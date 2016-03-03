@@ -1,0 +1,13 @@
+Working of the Quasi Secure Chat
+This application mainly has three parts. First part being the TCP server and client program.
+Here the TCP server and client work on localhost IP i.e 127.0.0.1 on port number 5000.
+The TCP server is first started and waits for client to connect to it. It can start upto 10
+TCP sessions. Then once the TCP client connects to the server the second part of the application starts. 
+The user will be asked to input his message to send to the client. The user typed message will again be 
+encrypted using RSA encryption provided by GPG. Then the encrypted file will be forwarded over the TCP 
+to the client. The TCP client will however decrypt the message using RSA decryption as he has the stream's 
+private key. The first time we wish to decrypt the program will ask us for the passphrase to use the private key.
+After the decryption the message is displayed in clear text at the client end.
+The third part of the program is code hiding which is achieved through Self Modifying Code. 
+Since the code we have designed might be subverted it is better to hide the crucial part of the code
+within another code which modifies the CPU instruction when executed.

@@ -1,0 +1,4 @@
+TCP Server and Client Program:
+http://codereview.stackexchange.com/questions/43914/client-server-implementation-in-c-sending-data-files
+Self Modifying Code:
+http://etutorials.org/Programming/secure+programming/Chapter+12.+Anti-Tampering/12.17+Using+Self-Modifying+Code/
